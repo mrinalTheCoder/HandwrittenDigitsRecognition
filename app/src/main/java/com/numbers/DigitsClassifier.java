@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.provider.MediaStore;
 import android.util.Log;
 
 import org.tensorflow.lite.Interpreter;
@@ -19,8 +17,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Vector;
 
 public class DigitsClassifier {
@@ -100,10 +96,7 @@ public class DigitsClassifier {
 
     public String classifyDigits(final Bitmap bitmap) {
         Bitmap resizedImage = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
-        MediaStore.Images.Media.insertImage(ctx.getContentResolver(), resizedImage, "resized", null);
         ByteBuffer byteBuffer = convertBitmapToByteBuffer(resizedImage);
-        //Bitmap convertedBitmap = convertToBitMap(byteBuffer);
-        //MediaStore.Images.Media.insertImage(ctx.getContentResolver(), convertedBitmap, "converted", null);
 
         tfLite.run(byteBuffer, outputClasses);
 

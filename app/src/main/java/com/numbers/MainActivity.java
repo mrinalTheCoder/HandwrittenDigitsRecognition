@@ -9,12 +9,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -23,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private DrawingView drawingView;
     DigitsClassifier digitClassifier;
     private Button clearButton;
-    //private TextView predictedDigitView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,10 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Canvas canvas = new Canvas(image);
         canvas.drawColor(Color.BLACK);
         drawingView.draw(canvas);
-        String uri = MediaStore.Images.Media.insertImage(getContentResolver(), image, "title", null);
-        Log.i("uri", uri);
 
-        //String digit = digitClassifier.classifyDigits(drawingView.getBitmap());
         String digit = digitClassifier.classifyDigits(image);
         Toast.makeText(getApplicationContext(), "Detected Digit: " + digit, Toast.LENGTH_LONG).show();
     }
