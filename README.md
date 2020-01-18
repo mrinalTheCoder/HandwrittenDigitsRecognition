@@ -17,3 +17,13 @@ It is very easy to initialize the interpreter with the model:
 
 The model is called by the below line, with a grayscale input of size 28x28:
 `tfLite.run(byteBuffer, outputClasses);`<br/><br/>
+
+### Results:
+<br/><br/>Digit 2 <br/>
+<img src="https://drive.google.com/open?id=15bO6FCzHY6DQiI3TsLZWGPo8zPGFp3IK" />
+
+<br/><br/>Digit 7 <br/>
+<img src="https://drive.google.com/open?id=15RUWM_EishhHP6DmOlSmb1jPk_T1uRcf" />
+
+<br/><br/>Digit 8 <br/>
+<img src="https://drive.google.com/open?id=15QCL3IiSC_Zhfuh8lKrFaPZ0IBMZUD1r" />
