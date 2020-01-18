@@ -26,4 +26,4 @@ The model is called by the below line, with a grayscale input of size 28x28:
 <img src="results/digit_7.jpg" width="335" height="700" />
 
 <br/><br/>Digit 8 <br/>
-<img src="results/digit_b.jpg" width="335" height="700" />
+<img src="results/digit_8.jpg" width="335" height="700" />
