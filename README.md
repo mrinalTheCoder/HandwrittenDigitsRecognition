@@ -20,10 +20,10 @@ The model is called by the below line, with a grayscale input of size 28x28:
 
 ### Results:
 <br/><br/>Digit 2 <br/>
-<img src="https://drive.google.com/open?id=15bO6FCzHY6DQiI3TsLZWGPo8zPGFp3IK" />
+<img src="results/digit_2.jpg" width="335" height="700" />
 
 <br/><br/>Digit 7 <br/>
-<img src="https://drive.google.com/open?id=15RUWM_EishhHP6DmOlSmb1jPk_T1uRcf" />
+<img src="results/digit_7.jpg" width="335" height="700" />
 
 <br/><br/>Digit 8 <br/>
-<img src="https://drive.google.com/open?id=15QCL3IiSC_Zhfuh8lKrFaPZ0IBMZUD1r" />
+<img src="results/digit_b.jpg" width="335" height="700" />
